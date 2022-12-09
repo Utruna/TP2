@@ -3,12 +3,13 @@
 
 class Reservation{
     public:
-        Reservation(Date debut, int nbNuits, std::string idHotel, std::string idChambre, std::string idClient, int prixTot);
+        Reservation(Date debut, int nbNuits, std::string idHotel, std::string idChambre, std::string idClient, int prix);
         Date debut();
         std::string idHotel();
         std::string idChambre();
         std::string idClient();
         int prixTot();
+        void displayDebut();
 
     private:
         Date _debut;
@@ -16,5 +17,6 @@ class Reservation{
         std::string _idHotel;
         std::string _idChambre;
         std::string _idClient;
-        int _prixTot;
+        int _prix;
+        int _prixTot = _nbNuits*_prix;
 };

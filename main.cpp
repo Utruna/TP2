@@ -19,7 +19,7 @@ int main() {
     
     Date date1(9, 12, 2022);
     Reservation R1(date1, 8, "R2D2", "3AB", "utruna", 200);
-    
+    R1.displayDebut();
     return 0;
 }
 
