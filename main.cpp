@@ -2,6 +2,7 @@
 #include "hotel.h"
 #include "client.h"
 #include "chambre.h"
+#include "reservation.h"
 
 int main() {
         Client client("utruna", "liaud", "flo");
@@ -15,6 +16,10 @@ int main() {
     Chambre C1("R2D2", 2, 100);
     std::cout << C1.numeroChambre() << ", " << C1.nombreLits() << " , " << C1.prix() << std::endl;
     C1.updatePrix(200);
+    
+    Date date1(9, 12, 2022);
+    Reservation R1(date1, 8, "R2D2", "3AB", "utruna", 200);
+    
     return 0;
 }
 
