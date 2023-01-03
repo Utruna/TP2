@@ -1,14 +1,20 @@
 #include<iostream>
 
+
 class Chambre {
     public:
-        Chambre(std::string numeroChambre, int nombreLits, int prix);
+        Chambre(std::string numeroChambre, std::string type, float prix);
         std::string numeroChambre() const;
-        int nombreLits() const;
-        int prix() const;
-        std::string updatePrix(int nouveauPrix);
+        std::string type() const;
+        float prix() const;
+        std::string updatePrix(float nouveauPrix);
+        
+
     private:
         std::string _numeroChambre;
-        int _nombreLits;
-        int _prix;
+        std::string _type;
+        float _prix;
+        
+
 };
+std::ostream& operator<<(std::ostream& os, const Chambre& chambre);
