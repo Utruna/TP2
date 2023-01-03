@@ -18,8 +18,17 @@ int main() {
     C1.updatePrix(200);
     
     Date date1(9, 12, 2022);
-    Reservation R1(date1, 8, "R2D2", "3AB", "utruna", 200);
+    Reservation R1(date1, 50, "R2D2", "3AB", "utruna", 200);
     R1.displayDebut();
+    R1.displayFin();
+    std::cout << R1.prixTot();
+    R1.updateNbNuits(100);
+    R1.displayFin();
+    R1.updateDebut(Date(10, 12, 2022));
+    R1.displayDebut();
+    R1.displayFin();
+    R1.updatePrix(300);
+    std::cout << R1.prixTot();
     return 0;
 }
 

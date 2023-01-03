@@ -11,10 +11,12 @@ public:
     void updateDay(int day);
     void updateYear(int year);
 	bool isDate(int month, int day, int year);
+    Date operator+(int num_days) const;
 private:
     int _month;
     int _day;
     int _year;
+    int DaysInMonth(int month) const;
 
 };
 
